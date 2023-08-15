@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(calculatorbg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            margin: 50px 430px;
+            color: rgb(238, 255, 0);
+        }
+
+        hr {
+            width: 600px;
+            margin-left: -65px;
+            margin-top: -50px;
+
+        }
+
+        #main {
+            width: 720px;
+            height: 480px;
+            border: 3px solid #ccc;
+            margin: 25px 290px;
+            border-radius: 15px;
+            box-shadow: #ccc 3px 3px 10px 3px;
+            background-image: url(main.jpg);
+
+        }
+
+        #answer {
+            width: 650px;
+            height: 100px;
+            border: 3px solid #ccc;
+            margin-top: 20px;
+            margin-left: 30px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        #output {
+            font-size: 50px;
+            font-family: sans-serif;
+            font-weight: bold;
+            margin-left: 5%;
+            margin-top: 20px;
+        }
+
+        #first {
+            width: 230px;
+            height: 50px;
+            font-size: 35px;
+            font-family: sans-serif;
+            margin-left: 80px;
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        #second {
+            width: 230px;
+            height: 50px;
+            font-size: 35px;
+            font-family: sans-serif;
+            margin-left: 80px;
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        #add {
+            width: 230px;
+            height: 50px;
+            font-size: 35px;
+            font-family: sans-serif;
+            margin-left: 80px;
+            margin-top: 15px;
+            padding-left: 5px;
+        }
+
+        #sub {
+            width: 230px;
+            height: 50px;
+            font-size: 35px;
+            font-family: sans-serif;
+            margin-left: 80px;
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        #mul {
+            width: 230px;
+            height: 50px;
+            font-size: 35px;
+            font-family: sans-serif;
+            margin-left: 80px;
+            margin-top: 15px;
+            padding-left: 5px;
+        }
+
+        #div {
+            width: 230px;
+            height: 50px;
+            font-size: 35px;
+            font-family: sans-serif;
+            margin-left: 80px;
+            margin-top: 15px;
+            padding-left: 5px;
+        }
+
+        #rem {
+            width: 230px;
+            height: 50px;
+            font-size: 35px;
+            font-family: sans-serif;
+            margin-left: 80px;
+            margin-top: 15px;
+            padding-left: 5px;
+        }
+
+        #res {
+            width: 230px;
+            height: 50px;
+            font-size: 35px;
+            font-family: sans-serif;
+            margin-left: 80px;
+            margin-top: 15px;
+            padding-left: 5px;
+        }
+
+        #btncontainer {
+            margin-top: 40px;
+        }
+    </style>
+    <script>
+        function add() {
+            var a = document.getElementById("first").value;
+            var b = document.getElementById("second").value;
+            var c = Number(a) + Number(b);
+            var d = document.getElementById("output");
+            d.innerHTML = c;
+        }
+        function sub() {
+            var a = document.getElementById("first").value;
+            var b = document.getElementById("second").value;
+            var c = a - b;
+            var d = document.getElementById("output");
+            d.innerHTML = c;
+        }
+        function mul() {
+            var a = document.getElementById("first").value;
+            var b = document.getElementById("second").value;
+            var c = a * b;
+            var d = document.getElementById("output");
+            d.innerHTML = c;
+        }
+        function div() {
+            var a = document.getElementById("first").value;
+            var b = document.getElementById("second").value;
+            var c = a / b;
+            var d = document.getElementById("output");
+            d.innerHTML = c;
+        }
+        function module() {
+            var a = document.getElementById("first").value;
+            var b = document.getElementById("second").value;
+            var c = a % b;
+            var d = document.getElementById("output");
+            d.innerHTML = c;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Online Calculator</h1>
+    <center>
+        <hr>
+    </center>
+    <div id="main">
+        <div id="answer">
+            <p id="output"></p>
+        </div>
+        <input type="number" id="first" placeholder="First No.">
+        <input type="number" id="second" placeholder="Second No.">
+        <div id="btncontainer">
+            <button id="add" onclick="add()">Addition</button>
+            <button id="sub" onclick="sub()">Subtraction</button>
+            <button id="mul" onclick="mul()">Multiply</button>
+            <button id="div" onclick="div()">Divide</button>
+            <button id="rem" onclick="module()">Modulo %</button>
+            <button id="res">Reset</button>
+
+        </div>
+    </div>
+</body>
+
+</html>
